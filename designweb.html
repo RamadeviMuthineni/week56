@@ -4,56 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Styled Web Page</title>
-    <style>
+    <style type="text/css">
+        /* General Body Styling */
         body {
-            font-family: Arial, sans-serif;
+            background-image: url('https://www.example.com/background.jpg'); /* Set background image for the whole page */
+            background-repeat: repeat; /* Tiles the image */
+            font-family: 'Arial', sans-serif; /* Global font family */
+            color: #333; /* Default text color */
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
         }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
+
+        /* Header Styles */
+        h1 {
+            color: blue;
+            font-size: 36px;
             text-align: center;
+            margin-top: 50px;
         }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-        }
-        h2 {
-            color: #333;
-        }
+
+        /* Paragraph Styling */
         p {
-            color: #555;
+            font-size: 18px;
+            line-height: 1.6;
+            padding: 20px;
+            text-align: justify;
         }
-        .footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
+
+        /* Link Styles */
+        a:link {
+            text-decoration: none;
+            color: blue;
         }
+
+        a:visited {
+            text-decoration: none;
+            color: purple;
+        }
+
+        a:active {
+            text-decoration: underline;
+            color: green;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: red;
+        }
+
+        /* Layer 1 on top */
+        .layer1 {
+            position: relative;
+            font-size: 50px;
+            z-index: 2;
+            color: black;
+        }
+
+        /* Layer 2 below */
+        .layer2 {
+            position: relative;
+            top: -50px;
+            left: 5px;
+            font-size: 80px;
+            z-index: 1;
+            color: red;
+        }
+
+        /* Customized Cursor */
+        .custom-cursor {
+            cursor: pointer; /* Change cursor to pointer when hovering over this class */
+        }
+
+        /* Headline Class Styling */
+        .headline {
+            color: red;
+            font-size: 22px;
+            font-family: Arial;
+            text-decoration: underline;
+        }
+
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to R.V.R. & J.C. College of Engineering</h1>
-    </header>
 
-    <div class="container">
-        <h2>About Us</h2>
-        <p>R.V.R. & J.C. College of Engineering (Autonomous), Chandramoulipuram, Chowdavaram, Guntur-522019, offers B.Tech in Computer Science and Business Systems under R20 regulations.</p>
+    <!-- Layer Example -->
+    <div class="layer1">LAYER 1 ON TOP</div>
+    <div class="layer2">LAYER 2 BELOW</div>
+
+    <!-- Example of a Customized Cursor -->
+    <div class="custom-cursor">
+        Hover over this text to see the custom cursor.
     </div>
 
-    <div class="footer">
-        <p>&copy; 2025 R.V.R. & J.C. College of Engineering</p>
-    </div>
+    <!-- Headline with Styling -->
+    <b class="headline">This is the headline style in bold</b>
+
+    <!-- Example Paragraph and Links -->
+    <h1>Welcome to the Styled Web Page</h1>
+    <p>This is an example of a web page with CSS styling. You can see the background image, customized links, layers, and more!</p>
+    <p>Check out this <a href="https://www.example.com">link</a> to explore more content.</p>
+
 </body>
 </html>
